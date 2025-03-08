@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Profesor; // Importar el modelo
+use App\Models\Asignatura; // Importar el modelo
 
 class ProfesorController extends Controller
 {
@@ -35,7 +36,20 @@ class ProfesorController extends Controller
             'email' => 'required|email|unique:profesores',
         ]);
 
-        $profesor = new Profesor($request->all());        
+        $profesor = new Profesor($request->all());  
+        $profesor->save();
+
+        if ($request->has("asignaturas")){
+            foreach ($request->asignaturas as $asignatura_impartida){
+                $asignatura = new Asignatura();
+                $asignatura->profesor_id= $profesor->id;
+                $asignatura->asignatura = $asignatura_impartida;
+                $asignatura->curso = $request->curso[$asignatura_impartida];
+                $asignatura->horario = $request->horario[$asignatura_impartida];
+                $asignatura->save();
+            }
+        }      
+
         $profesor->save();
         session()->flash("mensaje","Profesor $profesor->nombre registrado");
 

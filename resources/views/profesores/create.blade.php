@@ -63,6 +63,35 @@
                     </div>
                 </div>
 
+                <div class="max-h-96 overflow-y-auto px-4 text-sm">
+                            <h2 class="font-semibold text-lg mb-2">Listado de asignaturas</h2>
+                            <div x-data="{ asignaturas: {} }">
+                                @foreach(config("asignaturas") as $asignatura)
+                                    <div class="flex items-center gap-3 border-b py-2">
+                                        <input type="checkbox" name="asignaturas[]" value="{{$asignatura}}" x-model="asignaturas['{{$asignatura}}']">
+                                        <label for="asignatura{{$loop->index}}" class="flex-grow">{{$asignatura}}</label>
+                                        <template x-if="asignaturas['{{$asignatura}}']">
+                                            <div>
+                                                <select name="curso[{{$asignatura}}]" class="border rounded text-sm">
+                                                    <option disabled selected value="">Curso</option>
+                                                    <option value="1º">1º</option>
+                                                    <option value="2º">2º</option>
+                                                </select>
+
+                                                <select name="horario[{{$asignatura}}]" class="border rounded text-sm">
+                                                    <option disabled selected value="">Horario</option>
+                                                    <option value=>No definido</option>
+                                                    <option value="Diurno">Diurno</option>
+                                                    <option value="Vespertino">Vespertino</option>
+                                                </select>
+                                            </div>
+                                        </template>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                {{-- asignaturas --}}
+
                 {{-- Botones --}}
                 <div class="p-2">
                     <button class="btn btn-sm btn-success" type="submit">Guardar</button>

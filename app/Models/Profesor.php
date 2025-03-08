@@ -12,4 +12,8 @@ class Profesor extends Model
     protected $table = 'profesores';
 
     protected $fillable = ['nombre', 'apellido', 'email', 'telefono', 'fecha_nacimiento'];
+
+    public function asignaturas(){
+        return $this->hasMany(Asignatura::class);
+    }
 }
