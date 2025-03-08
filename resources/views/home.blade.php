@@ -1,4 +1,4 @@
-<x-layouts.layout titulo="instituo">
+<x-layouts.layout titulo="instituto">
     @guest
         <div
             class="hero min-h-full"
