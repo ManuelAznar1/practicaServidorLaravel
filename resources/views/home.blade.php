@@ -32,5 +32,19 @@
                     </div>
                 </div>
             </div>
+            <div class=" p-4 card bg-base-100 image-full w-96 shadow-xl">
+                <figure>
+                    <img
+                        src="{{asset("/images/alumnos.jpeg")}}"
+                        alt="Profesores" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">CRUD Profesores!</h2>
+                    <p>Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores
+                    <div class="card-actions justify-end">
+                        <a class="btn btn-primary" href="{{route("profesores.index")}}">Ver Profesores</a>
+                    </div>
+                </div>
+            </div>
         @endauth
 </x-layouts.layout>

@@ -9,7 +9,7 @@ return[
         "flag"=>"🇫🇷",
     ],
     "en"=>[
-        "name"=>"Enghis",
+        "name"=>"English",
         "flag"=>"🇬🇧",
     ]
 ]
