@@ -1,4 +1,4 @@
-<x-layouts.layout titulo="instituto">
+<x-layouts.layout titulo="PRACTICA LARAVEL">
     @guest
         <div
             class="hero min-h-full"
@@ -6,13 +6,13 @@
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center">
                 <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Aprendiendo Laravel</h1>
+                    <h1 class="mb-5 text-5xl font-bold">{{ __("Aplicacion CRUD Laravel")}}</h1>
                     <p class="mb-5">
-                        Aplicación para aprender Laravel
+                    {{ __("Aplicación CRUD Laravel")}}
                     <hr/>
-                    Registrate para acceder a las opciones
+                    {{ __("Registrate para acceder a los cruds")}}
                     </p>
-                    <a class="btn btn-primary" href="{{route("login")}}">Login</a>
+                    <a class="btn btn-primary" href="{{route("login")}}">{{ __("Login")}}</a>
                 </div>
             </div>
         </div>
@@ -24,10 +24,10 @@
             <img src="{{ asset('/images/alumnos.jpeg') }}" alt="Alumnos" />
         </figure>
         <div class="card-body">
-            <h2 class="card-title">CRUD Alumnos!</h2>
-            <p>Gestionamos Altas bajas actualizaciones y borrado de una tabla de alumnos</p>
+            <h2 class="card-title">{{ __("CRUD Alumnos!")}}</h2>
+            <p>{{ __("Gestionamos Altas bajas actualizaciones y borrado de una tabla de alumnos")}}</p>
             <div class="card-actions justify-end">
-                <a class="btn btn-primary" href="{{ route('alumnos.index') }}">Ver alumnos</a>
+                <a class="btn btn-primary" href="{{ route('alumnos.index') }}">{{ __("Ver Alumnos")}}</a>
             </div>
         </div>
     </div>
@@ -37,10 +37,10 @@
             <img src="{{ asset('/images/alumnos.jpeg') }}" alt="Profesores" />
         </figure>
         <div class="card-body">
-            <h2 class="card-title">CRUD Profesores!</h2>
-            <p>Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores</p>
+            <h2 class="card-title">{{ __("CRUD Profesores!")}}</h2>
+            <p>{{ __("Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores")}}</p>
             <div class="card-actions justify-end">
-                <a class="btn btn-primary" href="{{ route('profesores.index') }}">Ver Profesores</a>
+                <a class="btn btn-primary" href="{{ route('profesores.index') }}">{{ __("Ver Profesores")}}</a>
             </div>
         </div>
     </div>

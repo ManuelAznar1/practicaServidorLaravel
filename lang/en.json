@@ -130,5 +130,18 @@
     "Vasco": "Basque",
     "Francés": "French",
     "Alemán": "German",
-    "Rumano": "Romanian"
+    "Rumano": "Romanian",
+    "Bienvenido": "Welcome",
+    "Acerca de": "About",
+    "Noticias": "News",
+    "Contacta": "Contact",
+    "Referencias": "References",
+    "Aplicacion CRUD Laravel": "CRUD Laravel Application",
+    "Registrate para acceder a los cruds": "Register to access the cruds",
+    "CRUD Alumnos!": "CRUD Students!",
+    "CRUD Profesores!": "CRUD Teachers!",
+    "Gestionamos Altas bajas actualizaciones y borrado de una tabla de alumnos": "We manage the creation, updates, and deletion of a students table",
+    "Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores": "We manage the creation, updates, and deletion of a teachers table",
+    "Ver Alumnos": "View Students",
+    "Ver Profesores": "View Alumnos"
 }
