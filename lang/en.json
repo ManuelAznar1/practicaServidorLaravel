@@ -143,5 +143,9 @@
     "Gestionamos Altas bajas actualizaciones y borrado de una tabla de alumnos": "We manage the creation, updates, and deletion of a students table",
     "Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores": "We manage the creation, updates, and deletion of a teachers table",
     "Ver Alumnos": "View Students",
-    "Ver Profesores": "View Alumnos"
+    "Ver Profesores": "View Teachers",
+    "Ingrese su correo electrónico": "Enter your email adress",
+    "Ingrese su contraseña": "Enter your password",
+    "Confirmar contraseña": "Confirm your password",
+    "Introduce tu nombre": "Enter your name"
 }

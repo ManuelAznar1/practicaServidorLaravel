@@ -143,5 +143,9 @@
     "Gestionamos Altas bajas actualizaciones y borrado de una tabla de alumnos": "Nous gérons la création, les mises à jour et la suppression d'une table d'étudiants",
     "Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores": "Nous gérons la création, les mises à jour et la suppression d'une table de professeurs",
     "Ver Alumnos": "Voir les Étudiants",
-    "Ver Profesores": "Voir les Professeurs"
+    "Ver Profesores": "Voir les Professeurs",
+    "Ingrese su correo electrónico": "Entrez votre adresse e-mail",
+    "Ingrese su contraseña": "Entrez votre mot de passe",
+    "Confirmar contraseña": "Confirmer le mot de passe ",
+    "Introduce tu nombre": "Entrez votre nom"
 }
