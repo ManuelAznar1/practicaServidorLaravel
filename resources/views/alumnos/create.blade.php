@@ -10,7 +10,7 @@
                         {{--                datos--}}
                     <div class="bg-white rounded-2xl p-5 grid grid-cols-2 gap-4">
                         <div>
-                            <x-input-label for="name" value="Nombre"/>
+                            <x-input-label for="name" :value="__('Nombre')"/>
                             <x-text-input id="nombre" class="block mt-1 w-full" type="text" name="nombre"
                                           value="{{old('nombre')}}"/>
                             @error("nombre")
@@ -22,7 +22,7 @@
 
                         </div>
                         <div>
-                            <x-input-label for="email" value="Email"/>
+                            <x-input-label for="email" :value="__('Email')"/>
                             <x-text-input id="email" class="block mt-1 w-full"
                                           type="email" name="email"
                                           value="{{old('email')}}"
@@ -35,7 +35,7 @@
 
                         </div>
                         <div>
-                            <x-input-label for="f_nac" value="Fecha de Nacimiento" />
+                            <x-input-label for="f_nac" :value="__('Fecha de Nacimiento')" />
 
                             <x-text-input id="f_nac" class="block mt-1 w-full"
                                           type="date" name="f_nac"
@@ -49,7 +49,7 @@
 
                         </div>
                         <div>
-                            <x-input-label for="dni" value="DNI" />
+                            <x-input-label for="dni" :value="__('DNI')" />
                             <x-text-input id="dni" class="block mt-1 w-full"
                                           type="text" name="dni"
                                           value="{{old('dni')}}"
@@ -63,24 +63,24 @@
                         </div>
                     </div>
                         <div class="max-h-96 overflow-y-auto px-4 text-sm">
-                            <h2 class="font-semibold text-lg mb-2">Listado de idiomas</h2>
+                            <h2 class="font-semibold text-lg mb-2">{{__("Listado de idiomas")}}</h2>
                             <div x-data="{ idiomas: {} }">
                                 @foreach(config("idiomas") as $idioma)
                                     <div class="flex items-center gap-3 border-b py-2">
                                         <input type="checkbox" name="idiomas[]" value="{{$idioma}}" x-model="idiomas['{{$idioma}}']">
-                                        <label for="idioma_{{$loop->index}}" class="flex-grow">{{$idioma}}</label>
+                                        <label for="idioma_{{$loop->index}}" class="flex-grow">{{__("$idioma")}}</label>
                                         <template x-if="idiomas['{{$idioma}}']">
                                             <div>
                                                 <select name="nivel[{{$idioma}}]" class="border rounded text-sm">
-                                                    <option disabled selected value="">Nivel</option>
-                                                    <option value="Alto">Alto</option>
-                                                    <option value="Medio">Medio</option>
-                                                    <option value="Bajo">Bajo</option>
+                                                    <option disabled selected value="">{{__("Nivel")}}</option>
+                                                    <option value="Alto">{{__("Alto")}}</option>
+                                                    <option value="Medio">{{__("Medio")}}</option>
+                                                    <option value="Bajo">{{__("Bajo")}}</option>
                                                 </select>
 
                                                 <select name="titulo[{{$idioma}}]" class="border rounded text-sm">
-                                                    <option disabled selected value="">Título</option>
-                                                    <option value=>Sin título</option>
+                                                    <option disabled selected value="">{{__("Título")}}</option>
+                                                    <option value=>{{__("Sin título")}}</option>
                                                     <option value="A1">A1</option>
                                                     <option value="A2">A2</option>
                                                     <option value="B1">B1</option>
@@ -99,8 +99,8 @@
 
                         </div>
                         <div class="p-2">
-                            <button class= "btn btn-sm btn-success"  type="submit">Guardar </button>
-                            <a class= "btn btn-sm btn-success" href="{{route("alumnos.index")}}">Cancelar</a>
+                            <button class= "btn btn-sm btn-success"  type="submit">{{__("Guardar")}} </button>
+                            <a class= "btn btn-sm btn-success" href="{{route("alumnos.index")}}">{{__("Cancelar")}}</a>
                         </div>
                     </div>
                 </form>

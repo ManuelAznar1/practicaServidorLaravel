@@ -17,8 +17,8 @@
     @endif
 
     <div class="p-2 bg-gray-200">
-        <a class="btn btn-sm btn-secondary" href="{{ route('profesores.create') }}">Crear Profesor</a>
-        <a class="btn btn-sm btn-secondary" href="{{ route('home') }}">Volver</a>
+        <a class="btn btn-sm btn-secondary" href="{{ route('profesores.create') }}">{{__("Crear Profesor")}}</a>
+        <a class="btn btn-sm btn-secondary" href="{{ route('home') }}">{{__("Volver")}}</a>
     </div>
 
     <div class="max-h-full overflow-x-auto">
@@ -60,7 +60,7 @@
                         </td>
 
                         {{-- Ver detalles --}}
-                        <td><a href="{{ route('profesores.show', $profesor->id) }}">Ver</a></td>
+                        <td><a href="{{ route('profesores.show', $profesor->id) }}">{{__("Ver")}}</a></td>
                     </tr>
                 @endforeach
             </tbody>

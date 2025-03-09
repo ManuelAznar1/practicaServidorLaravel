@@ -8,7 +8,7 @@
                 {{-- Datos del Profesor --}}
                 <div class="bg-white rounded-2xl p-5 grid grid-cols-2 gap-4">
                     <div>
-                        <x-input-label for="nombre" value="Nombre"/>
+                        <x-input-label for="nombre" :value="__('Nombre')"/>
                         <x-text-input id="nombre" class="block mt-1 w-full" type="text" name="nombre"
                                       value="{{ old('nombre') }}" required/>
                         @error("nombre")
@@ -19,7 +19,7 @@
                     </div>
 
                     <div>
-                        <x-input-label for="apellido" value="Apellido"/>
+                        <x-input-label for="apellido" :value="__('Apellido')"/>
                         <x-text-input id="apellido" class="block mt-1 w-full" type="text" name="apellido"
                                       value="{{ old('apellido') }}" required/>
                         @error("apellido")
@@ -41,7 +41,7 @@
                     </div>
 
                     <div>
-                        <x-input-label for="telefono" value="Teléfono"/>
+                        <x-input-label for="telefono" :value="__('Telefono')"/>
                         <x-text-input id="telefono" class="block mt-1 w-full" type="text" name="telefono"
                                       value="{{ old('telefono') }}" required/>
                         @error("telefono")
@@ -52,7 +52,7 @@
                     </div>
 
                     <div>
-                        <x-input-label for="fecha_nacimiento" value="Fecha de Nacimiento"/>
+                        <x-input-label for="fecha_nacimiento" :value="__('Fecha de Nacimiento')"/>
                         <x-text-input id="fecha_nacimiento" class="block mt-1 w-full" type="date" name="fecha_nacimiento"
                                       value="{{ old('fecha_nacimiento') }}" required/>
                         @error("fecha_nacimiento")
@@ -64,25 +64,25 @@
                 </div>
 
                 <div class="max-h-96 overflow-y-auto px-4 text-sm">
-                            <h2 class="font-semibold text-lg mb-2">Listado de asignaturas</h2>
+                            <h2 class="font-semibold text-lg mb-2">{{__("Listado de asignaturas")}}</h2>
                             <div x-data="{ asignaturas: {} }">
                                 @foreach(config("asignaturas") as $asignatura)
                                     <div class="flex items-center gap-3 border-b py-2">
                                         <input type="checkbox" name="asignaturas[]" value="{{$asignatura}}" x-model="asignaturas['{{$asignatura}}']">
-                                        <label for="asignatura{{$loop->index}}" class="flex-grow">{{$asignatura}}</label>
+                                        <label for="asignatura{{$loop->index}}" class="flex-grow">{{__("$asignatura")}}</label>
                                         <template x-if="asignaturas['{{$asignatura}}']">
                                             <div>
                                                 <select name="curso[{{$asignatura}}]" class="border rounded text-sm">
-                                                    <option disabled selected value="">Curso</option>
+                                                    <option disabled selected value="">{{__("Curso")}}</option>
                                                     <option value="1º">1º</option>
                                                     <option value="2º">2º</option>
                                                 </select>
 
                                                 <select name="horario[{{$asignatura}}]" class="border rounded text-sm">
-                                                    <option disabled selected value="">Horario</option>
-                                                    <option value=>No definido</option>
-                                                    <option value="Diurno">Diurno</option>
-                                                    <option value="Vespertino">Vespertino</option>
+                                                    <option disabled selected value="">{{__("Horario")}}</option>
+                                                    <option value=>{{__("No definido")}}</option>
+                                                    <option value="Diurno">{{__("Diurno")}}</option>
+                                                    <option value="Vespertino">{{__("Vespertino")}}</option>
                                                 </select>
                                             </div>
                                         </template>
@@ -94,8 +94,8 @@
 
                 {{-- Botones --}}
                 <div class="p-2">
-                    <button class="btn btn-sm btn-success" type="submit">Guardar</button>
-                    <a class="btn btn-sm btn-danger" href="{{ route('profesores.index') }}">Cancelar</a>
+                    <button class="btn btn-sm btn-success" type="submit">{{__("Guardar")}}</button>
+                    <a class="btn btn-sm btn-danger" href="{{ route('profesores.index') }}">{{__("Cancelar")}}</a>
                 </div>
             </div>
         </form>

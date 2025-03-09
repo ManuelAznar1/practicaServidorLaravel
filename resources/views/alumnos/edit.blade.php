@@ -6,7 +6,7 @@
             @csrf
             <div class="bg-white rounded-2xl p-5">
                 <div>
-                    <x-input-label for="name" value="Nombre"/>
+                    <x-input-label for="name" :value="__('Nombre')"/>
                     <x-text-input id="nombre" class="block mt-1 w-full" type="text" name="nombre"
                                   value="{{ $alumno->nombre}}"/>
                     @error("nombre")
@@ -18,7 +18,7 @@
 
                 </div>
                 <div>
-                    <x-input-label for="email" value="Email"/>
+                    <x-input-label for="email" :value="__('Email')"/>
                     <x-text-input id="email" class="block mt-1 w-full"
                                   type="email" name="email"
                                   value="{{$alumno->email}}"
@@ -31,7 +31,7 @@
 
                 </div>
                 <div>
-                    <x-input-label for="f_nac" value="Fecha de Nacimiento" />
+                    <x-input-label for="f_nac" :value="__('Fecha de Nacimiento')" />
 
                     <x-text-input id="f_nac" class="block mt-1 w-full"
                                   type="date" name="f_nac"
@@ -45,7 +45,7 @@
 
                 </div>
                 <div>
-                    <x-input-label for="dni" value="DNI" />
+                    <x-input-label for="dni" :value="__('DNI')" />
                     <x-text-input id="dni" class="block mt-1 w-full"
                                   type="text" name="dni"
                                   value="{{$alumno->dni}}"
@@ -58,8 +58,8 @@
 
                 </div>
                 <div class="p-2">
-            <button class= "btn btn-sm btn-success"  type="submit">Guardar </button>
-            <a class= "btn btn-sm btn-success" href="{{route("alumnos.index")}}">Cancelar</a>
+            <button class= "btn btn-sm btn-success"  type="submit">{{__("Guardar")}} </button>
+            <a class= "btn btn-sm btn-success" href="{{route("alumnos.index")}}">{{__("Cancelar")}}</a>
                 </div>
             </div>
 

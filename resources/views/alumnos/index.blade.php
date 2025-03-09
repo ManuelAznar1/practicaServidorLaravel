@@ -19,8 +19,8 @@
 
 
     <div class="p-2 bg-gray-200">
-        <a class="btn btn-sm btn-secondary " href="{{route("alumnos.create")}}">Crear alumno</a>
-        <a class="btn btn-sm btn-secondary " href="{{route("home")}}">Volver</a>
+        <a class="btn btn-sm btn-secondary " href="{{route("alumnos.create")}}">{{__("Crear alumno")}}</a>
+        <a class="btn btn-sm btn-secondary " href="{{route("home")}}">{{__("Volver")}}</a>
     </div>
     <div class="max-h-full overflow-x-auto">
         <table class="table table-xs table-pin-rows table-pin-cols">
@@ -60,7 +60,7 @@
                         </form>
                     </td>
 {{--                        Vero o show--}}
-                    <td><a href="{{route("alumnos.show", $fila->id)}}">Ver</a></td>
+                    <td><a href="{{route("alumnos.show", $fila->id)}}">{{__("Ver")}}</a></td>
                 </tr>
 
             @endforeach

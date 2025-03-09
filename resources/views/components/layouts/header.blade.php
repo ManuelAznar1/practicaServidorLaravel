@@ -40,8 +40,8 @@
 
         @endauth
         @guest
-                <a class="btn  btn-glass" href="{{route("login")}}">Login</a>
-                <a class="btn  btn-glass" href="{{route("register")}}">Register</a>
+                <a class="btn  btn-glass" href="{{route("login")}}">{{__("Iniciar Sesion")}}</a>
+                <a class="btn  btn-glass" href="{{route("register")}}">{{__("Registrar")}}</a>
         @endguest
             </div>
 
