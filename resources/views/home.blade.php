@@ -18,33 +18,33 @@
         </div>
     @endguest
     @auth
-            <div class=" p-4 card bg-base-100 image-full w-96 shadow-xl">
-                <figure>
-                    <img
-                        src="{{asset("/images/alumnos.jpeg")}}"
-                        alt="Alumnos" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">CRUD Alumnos!</h2>
-                    <p>Gestionamos Altas bajas actualizaciones y borrado de una tabla de alumnos
-                    <div class="card-actions justify-end">
-                        <a class="btn btn-primary" href="{{route("alumnos.index")}}">Ver alumnos</a>
-                    </div>
-                </div>
+    <div class="flex justify-center gap-10">
+    <div class="p-4 card bg-base-100 image-full w-96 shadow-xl mt-20"> <!-- Añadí mt-20 para mover este div hacia abajo -->
+        <figure>
+            <img src="{{ asset('/images/alumnos.jpeg') }}" alt="Alumnos" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">CRUD Alumnos!</h2>
+            <p>Gestionamos Altas bajas actualizaciones y borrado de una tabla de alumnos</p>
+            <div class="card-actions justify-end">
+                <a class="btn btn-primary" href="{{ route('alumnos.index') }}">Ver alumnos</a>
             </div>
-            <div class=" p-4 card bg-base-100 image-full w-96 shadow-xl">
-                <figure>
-                    <img
-                        src="{{asset("/images/alumnos.jpeg")}}"
-                        alt="Profesores" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">CRUD Profesores!</h2>
-                    <p>Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores
-                    <div class="card-actions justify-end">
-                        <a class="btn btn-primary" href="{{route("profesores.index")}}">Ver Profesores</a>
-                    </div>
-                </div>
+        </div>
+    </div>
+
+    <div class="p-4 card bg-base-100 image-full w-96 shadow-xl mt-20"> <!-- Añadí mt-20 para mover este div hacia abajo -->
+        <figure>
+            <img src="{{ asset('/images/alumnos.jpeg') }}" alt="Profesores" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">CRUD Profesores!</h2>
+            <p>Gestionamos Altas bajas actualizaciones y borrado de una tabla de profesores</p>
+            <div class="card-actions justify-end">
+                <a class="btn btn-primary" href="{{ route('profesores.index') }}">Ver Profesores</a>
             </div>
+        </div>
+    </div>
+</div>
+
         @endauth
 </x-layouts.layout>
